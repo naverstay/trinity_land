@@ -1,47 +1,233 @@
 include mixins.pug
 doctype html
 html(lang='ru')
-    +dev_head('Trinity land')
+  +dev_head('Trinity land')
 
-    body
-        .wrapper
-            .rect_1024
-            .base
-                div.header
-                    .section_inner.clearfix
-                        .logo_block
-                            a.logo(href='#')
-                                img(src='i/logo.png')
+  body
+    .page_wrapper
+      +header()
+      
+      div.main_content
+        .hero_section
+          .section_inner
+            .hero_title.text_center 
+              .fz_36.ff_cond Сервер и СХД для 1С от производителя
+              .fz_30 с гарантией 3 года
+        
+            .hero_server
+              .hero_img
+                img(src='img/server.png')
+                  
+                .hero_img_text
+                  //-span._shadow Сервер на 50 пользовательй 1С. 2 процессора, от 24 Gb памяти, любые комплектующие
+                  span._text Сервер на 50 пользовательй 1С. 2 процессора, от 24 Gb памяти, любые комплектующие
 
-                        .share_block
-                            .share_caption скидки на все туры
-                            .share_caption
-                                | скидки на все туры
-                                span.share_value 8%
+              .hero_price_block
+                .old_price 157 500 р.
+                .new_price
+                  span.ff_cond 33 000
+                  span  р.
+                  
+                a.btn_v1.order_btn.btn_green
+                  //-span._shadow.ff_cond Заказать сервер
+                  span._text.ff_cond Заказать сервер
+                  
+            ul.hero_features
+              li
+                .feature_item
+                  .feature_icon
+                    span.i-medal-of-award
+                  p ГАРАНТИЯ 36 <br> МЕСЯЦЕВ*
+                  
+              li
+                .feature_item
+                  .feature_icon
+                    span.i-delivery-truck
+                  p ДОСТАВКА В <br> ЛЮБЫЕ РЕГИОНЫ
+                  
+              li
+                .feature_item
+                  .feature_icon
+                    span.i-stopwatch
+                  p Оборудование <br> протестировано
+                  
+              li
+                .feature_item
+                  .feature_icon
+                    span.i-shopping-cart-of-horizontal-lines-design
+                  p широкий <br>Ассортимент
+                  
+              li
+                .feature_item
+                  .feature_icon
+                    span.i-medal-of-award
+                  p СЕРВЕР ОТ <br> ПРОИЗВОДИТЕЛЯ
+                  
+        .testing_section
+          .section_inner
+            .testing_block
+              .testing_img
+                img(src='img/server.svg')
+                .search_img
+                  img(src='img/search_1.svg')
+              .section_caption Тринити - это серверы, прошедшие процедуру тщательного контроля и тестирования
+            
+              p Наши квалифицированные сервисные инженеры диагностируют, настраивают и тестируют индивидуально каждый сервер,  ведь предлагая оборудование в продажу, мы должны быть уверены в безупречной работе каждого компонента.
+              
+        .solution_section
+          .section_inner
+            .section_caption.text_center Готовые серверные решения под 1С
+              
+            ul.solution_list
+              li
+                .solution_unit
+                  .corner_info._mod_1
+                    .corner_counter 50
+                    .corner_stripe пользователей 1С
+                    
+                  .solution_img
+                    img(src='img/solution.png')
+                    
+                  .solution_name (1U, 2 x Intel Xeon E5-2620V4) <br> 64GB RAM,2x150GB+2x240GB <br> SATA
+                    
+                  .solution_price
+                    span.ff_cond.fz_24 246 300
+                    span.fz_18  рублей
+                    
+                  .solution_control
+                    a.btn_v1.order_btn.btn_green_2(href='#')
+                      span.ff_cond._text Заказать
+                      
+              li
+                .solution_unit
+                  .corner_info._mod_2
+                    .corner_counter 100
+                    .corner_stripe пользователей 1С
+                    
+                  .solution_img
+                    img(src='img/solution.png')
+                    
+                  .solution_name (1U, 2 x Intel Xeon E5-2640V4) <br> 128GB RAM, 2x150GB+2x200GB <br> SATA
+                    
+                  .solution_price
+                    span.ff_cond.fz_24 386 300
+                    span.fz_18  рублей
+                    
+                  .solution_control
+                    a.btn_v1.order_btn.btn_green_2(href='#')
+                      span.ff_cond._text Заказать
+                      
+              li
+                .solution_unit
+                  .corner_info._mod_3
+                    .corner_counter 200
+                    .corner_stripe пользователей 1С
+                    
+                  .solution_img
+                    img(src='img/solution.png')
+                    
+                  .solution_name (1U, 2 x Intel Xeon E5-2680V4) <br> 256 GB RAM, 2x150GB+2x200GB <br> SATA
+                    
+                  .solution_price
+                    span.ff_cond.fz_24 602 300
+                    span.fz_18  рублей
+                    
+                  .solution_control
+                    a.btn_v1.order_btn.btn_green_2(href='#')
+                      span.ff_cond._text Заказать
+                      
+            .section_caption.text_center Мы официальные поставщики следующих <br> производителей
+              
+            ul.manufacturer_list
+              - var i = 0
+              while i < 7
+                li
+                  .manufacturer_item
+                    img(src='img/manufacturer_' + (++i) + '.png')
+                
+            .learn_more
+              a.btn_v1.order_btn.btn_green_2(href='#')
+                span.ff_cond._text Подробнее
 
+        .tie_section
+        .choose_section
+          .section_inner
+            .left_server
+              img(src='img/servers.png')
+            .right_server
+              img(src='img/servers.png')
+            .section_caption.text_center Подберем сервер в зависимости от кол-ва <br> пользователей 1С
+              
+            .selection_block
+              label.f_label.label_v1(for='user_counter') кол-во пользователей
+              
+              .input_w.valCell.counter_cell
+                input#user_counter.input_v1.f_input.text_center(value='50' data-min='1' data-max='100' data-step='1' data-inputmask-regex="[1-9][0-9]*")
+                .btn_v1.btn_gray.counter_btn.minus.valMinus -
+                .btn_v1.btn_gray.counter_btn.plus.valPlus +
 
-                        .header_partners_block
-                            .header_p_block_row При поддержке
-                            .header_p_block_row.mod_1 Клуба путешественников
-                            .header_p_block_row.mod_2 “Turtle-Traveller”
+              a.btn_v1.order_btn.btn_green_2(href='#')
+                span.ff_cond._text Подобрать
+              
+                
+        .quality_section
+          .section_inner
+            .section_caption.text_center Все серверы проходят 5 ступеней контроля качества
+              
+            ul.quality_steps
+              li
+                .quality_step
+                  .quality_caption
+                    .quality_icon
+                      img(src='img/search.svg')
+                    .quality_count.ff_cond.fz_24 1
+                    span шаг
+                    
+                  p Сервисные инженеры выполняют визуальный осмотр всей поступающей продукции.
+                  
+              li
+                .quality_step
+                  .quality_caption
+                    .quality_icon
+                      img(src='img/test.svg')
+                    .quality_count.ff_cond.fz_24 2
+                    span шаг
+                    
+                  p Все поступившее оборудование проходит через диагностической центр Тринити.
+                    
+              li
+                .quality_step
+                  .quality_caption
+                    .quality_icon
+                      img(src='img/software.svg')
+                    .quality_count.ff_cond.fz_24 3
+                    span шаг
+                    
+                  p Мы выполняем полное обновление прошивок и ПО, чтобы адаптировать продукт именно для Вас.
+                  
+              li
+                .quality_step
+                  .quality_caption
+                    .quality_icon
+                      img(src='img/speedometer.svg')
+                    .quality_count.ff_cond.fz_24 4
+                    span шаг
+                    
+                  p Все оборудование проходит полное тестирование перед отправкой, чтобы обеспечить высокую производительность.
+                    
+              li
+                .quality_step
+                  .quality_caption
+                    .quality_icon
+                      img(src='img/box.svg')
+                    .quality_count.ff_cond.fz_24 5
+                    span шаг
+                    
+                  p Оборудование бережно упаковывается, чтобы заказанный Вами сервер прибыл без повреждений.
+                    
+                    
+              
+              
+      +footer()
 
-
-                    ul.main_menu
-                        li.menu_item
-                            a.menu_link.bg_color_white_mod(href='#')
-                                span.link_text О нас
-                        li.menu_item
-                            a.menu_link.bg_color_blue_mod(href='#')
-                                span.link_text ОТЗЫВЫ
-                        li.menu_item
-                            a.menu_link.bg_color_orange_mod(href='#')
-                                span.link_text ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
-                        
-
-
-
-
-                div.main_content
-
-
-            .footer
+      

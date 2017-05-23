@@ -3,25 +3,135 @@
 .btn_v1 {
   height: 50px;
 
-  &.callback_btn {
+  &.counter_btn {
+    @extend %no-user-select;
     cursor: pointer;
-    border-radius: 25px;
-    padding: 16px 24px;
-    font-weight: 500;
-    
+    position: absolute;
+    top: 17px;
+    border-radius: 3px;
+    width: 50px;
+    font-size: 30px;
+    line-height: 48px;
+    text-align: center;
+
+    &.minus {
+      left: 0;
+    }
+
+    &.plus {
+      right: 0;
+    }
+  }
+
+  &.order_btn {
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 10px;
+    display: block;
+    position: relative;
+    font-size: 18px;
+    line-height: 50px;
+
     &:before {
       font-size: 18px;
     }
-    
+
+    ._text {
+      z-index: 1;
+      position: relative;
+    }
+
+    .learn_more & {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.btn_green {
+  position: relative;
+  color: #fff;
+  margin: 3px;
+  text-shadow: -1px -1px 3px rgba(0, 0, 0, .3);
+  border-bottom: 2px solid #7b9840;
+  background: rgb(184, 215, 95);
+  background: -moz-linear-gradient(top, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  background: linear-gradient(to bottom, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8d75f', endColorstr='#97b850', GradientType=0);
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border-radius: inherit;
   }
 
+  &:after {
+    @include transition_all(opacity .3s);
+    background: rgb(151, 184, 80);
+    opacity: 0;
+    background: -moz-linear-gradient(top, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    background: linear-gradient(to bottom, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#97b850', endColorstr='#b8d75f', GradientType=0);
+  }
+
+  &:before {
+    margin: -3px;
+    border: 3px solid rgba(255, 255, 255, .3);
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
 }
 
-.green_btn {
+.btn_green_2 {
+  position: relative;
   color: #fff;
+  border-bottom: 2px solid #7b9840;
+  background: rgb(184, 215, 95);
+  background: -moz-linear-gradient(top, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  background: linear-gradient(to bottom, rgba(184, 215, 95, 1) 0%, rgba(151, 184, 80, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8d75f', endColorstr='#97b850', GradientType=0);
+
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border-radius: inherit;
+  }
+
+  &:after {
+    @include transition_all(opacity .3s);
+    background: rgb(151, 184, 80);
+    opacity: 0;
+    background: -moz-linear-gradient(top, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    background: linear-gradient(to bottom, rgba(151, 184, 80, 1) 0%, rgba(184, 215, 95, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#97b850', endColorstr='#b8d75f', GradientType=0);
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
 }
 
-.btn_red {
-  color: #fff;
-  background: #f46b65;
+.btn_gray {
+  background: #f6f6f6;
+  border: 1px solid #bababa;
+  color: #5d5d5d;
 }

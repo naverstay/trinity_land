@@ -1,0 +1,32 @@
+.f_label {
+
+  &.label_v1 {
+    text-align: center;
+    color: #939393;
+    font-size: 18px;
+  }
+
+}
+
+.f_input {
+  display: block;
+  width: 100%;
+
+  &.input_v1 {
+    color: #5d5d5d;
+    height: 50px;
+    font: 30px/48px $OpenSans;
+    background: #f6f6f6;
+    border: 1px solid #bababa;
+    border-radius: 3px;
+  }
+}
+
+.input_w {
+  position: relative;
+
+  &.counter_cell {
+    margin: 0 -14px;
+    padding: 17px 60px 43px;
+  }
+}
