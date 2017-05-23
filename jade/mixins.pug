@@ -1,0 +1,29 @@
+mixin dev_head(page_title)
+  head
+    title=page_title
+    meta(name="description", content='описание страницы')
+    meta(name="keywords", content='ключевые слова')
+    meta(property="og:title" content= page_title)
+
+    |  <!-- saved from url=(0014)about:internet -->
+    meta(charset='utf-8')
+    meta(name='viewport', content="width=device-width, initial-scale=1.0")
+    meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="format-detection", content="telephone=no")
+    |  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700&amp;subset=cyrillic" rel="stylesheet"> 
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+
+    link(rel='stylesheet', href='styles/lightbox.css', media='all')
+    link(rel='stylesheet', href='styles/main_global.css', media='all')
+
+    script(src='js/script.js')
+    script(src='js/jquery1.10.js')
+
+
+mixin loop_while(counter)
+  -i=0;
+  while i < counter
+    -i++;
+    block
+

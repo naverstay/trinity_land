@@ -1,60 +1,47 @@
-include mixins
+include mixins.pug
 doctype html
 html(lang='ru')
-	+dev_head('Lighthouse главная')
-	
-	body
-		.wrapper
-			.rect_1024
-			.base
-				div.header
-					.section_inner.clearfix
-						.logo_block
-							a.logo(href='#')
-								| TURTLE TOUR
-								div Home is where I am!
-							.tour_counter
-	
-						.share_block
-							.share_caption скидки на все туры
-							.share_caption
-								| скидки на все туры
-								span.share_value 8%
-	
-	
-						.header_partners_block
-							.header_p_block_row При поддержке
-							.header_p_block_row.mod_1 Клуба путешественников
-							.header_p_block_row.mod_2 “Turtle-Traveller”
-	
-	
-					ul.main_menu
-						li.menu_item
-							a.menu_link.bg_color_white_mod(href='#')
-								span.link_text О нас
-						li.menu_item
-							a.menu_link.bg_color_blue_mod(href='#')
-								span.link_text ОТЗЫВЫ
-						li.menu_item
-							a.menu_link.bg_color_orange_mod(href='#')
-								span.link_text ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
-						li.menu_item
-							a.menu_link.bg_color_green_mod(href='#')
-								span.link_text Заказать тур
-						li.menu_item
-							a.menu_link.bg_color_red_mod(href='#')
-								span.link_text РЕЙТИНГИ
-						li.menu_item
-							a.menu_link.bg_color_orange_mod(href='#')
-								span.link_text ПОЛЕЗНОЕ
-						li.menu_item
-							a.menu_link.bg_color_green_mod(href='#')
-								span.link_text КОНТАКТЫ
-	
-	
-	
-	
-				div.main_content
-	
-	
-			.footer
+    +dev_head('Trinity land')
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix
+                        .logo_block
+                            a.logo(href='#')
+                                img(src='i/logo.png')
+
+                        .share_block
+                            .share_caption скидки на все туры
+                            .share_caption
+                                | скидки на все туры
+                                span.share_value 8%
+
+
+                        .header_partners_block
+                            .header_p_block_row При поддержке
+                            .header_p_block_row.mod_1 Клуба путешественников
+                            .header_p_block_row.mod_2 “Turtle-Traveller”
+
+
+                    ul.main_menu
+                        li.menu_item
+                            a.menu_link.bg_color_white_mod(href='#')
+                                span.link_text О нас
+                        li.menu_item
+                            a.menu_link.bg_color_blue_mod(href='#')
+                                span.link_text ОТЗЫВЫ
+                        li.menu_item
+                            a.menu_link.bg_color_orange_mod(href='#')
+                                span.link_text ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
+                        
+
+
+
+
+                div.main_content
+
+
+            .footer

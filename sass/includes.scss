@@ -1,10 +1,16 @@
 @import "includes/global_var";
 @import "reset";
-@import "fonts";
-//@import "font_icons";
+//@import "fonts";
 //@import "jquery.ui.all";
 //@import "datapicker";
 //@import "dialog_global";
-//@import "default_styles";
+@import "font_icons";
+@import "../air_icons/style";
+
 @import "main";
+@import "header";
+@import "forms";
+@import "buttons";
+@import "tables";
+@import "footer";
 //@import "print";
