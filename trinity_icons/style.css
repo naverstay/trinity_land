@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'trinity_icons';
-  src:  url('fonts/trinity_icons.eot?40tebx');
-  src:  url('fonts/trinity_icons.eot?40tebx#iefix') format('embedded-opentype'),
-    url('fonts/trinity_icons.ttf?40tebx') format('truetype'),
-    url('fonts/trinity_icons.woff?40tebx') format('woff'),
-    url('fonts/trinity_icons.svg?40tebx#trinity_icons') format('svg');
+  src:  url('fonts/trinity_icons.eot?a5vakv');
+  src:  url('fonts/trinity_icons.eot?a5vakv#iefix') format('embedded-opentype'),
+    url('fonts/trinity_icons.ttf?a5vakv') format('truetype'),
+    url('fonts/trinity_icons.woff?a5vakv') format('woff'),
+    url('fonts/trinity_icons.svg?a5vakv#trinity_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-trinity:before {
+  content: "\e912";
+}
 .i-badge:before {
   content: "\e900";
 }
