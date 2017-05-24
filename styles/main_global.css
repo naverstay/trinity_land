@@ -110,7 +110,7 @@ html, body { height: 100%; }
 
 html { overflow-y: scroll; }
 
-body { font: 16px/1.2 "Open Sans", sans-serif; color: #4a5669; }
+body { font: 16px/1.2 "Open Sans", sans-serif; color: #4a5669; min-width: 1200px; }
 
 .hide { display: none !important; }
 
