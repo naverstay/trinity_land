@@ -6,6 +6,14 @@
     font-size: 18px;
   }
 
+  &.label_v2 {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
 }
 
 .f_input {
@@ -20,6 +28,19 @@
     border: 1px solid #bababa;
     border-radius: 3px;
   }
+
+  &.input_v2 {
+    color: #5d5d5d;
+    height: 45px;
+    font: 14px/45px $OpenSans;
+    background: #fff;
+    padding: 0 10px 0 50px;
+    border-radius: 3px;
+  }
+}
+
+textarea.f_input.input_v2 {
+  height: 100px;
 }
 
 .input_w {
@@ -28,5 +49,89 @@
   &.counter_cell {
     margin: 0 -14px;
     padding: 17px 60px 43px;
+  }
+}
+
+.input_icon {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 40px;
+  color: #e2e2e2;
+  font-size: 26px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.select_v1 {
+  position: relative;
+
+  .select2-container--default .select2-selection--single {
+    border: none;
+    height: 45px;
+
+    .select2-selection__placeholder {
+      color: $placeholder_color;
+      font-size: 14px;
+    }
+    
+    .select2-selection__rendered {
+      font-size: 14px;
+      line-height: 45px;
+      padding-left: 50px;
+      padding-right: 30px;
+    }
+
+    .select2-selection__arrow {
+      @include transition_all(transform .3s);
+      @extend %icon_pseudo;
+      top: 16px;
+      right: 16px;
+      width: auto;
+      height: auto;
+
+      &:before {
+        content: $i-chevron-down;
+        //position: absolute;
+        //top: 50%;
+        //margin-top: -4px;
+        //left: 8px;
+        color: #939393;
+
+      }
+
+      b {
+        display: none;
+      }
+    }
+  }
+
+  .select2-selection--single {
+
+    .select2-selection__rendered {
+      color: #29292c;
+      padding: 0 15px 0 0;
+      font-size: 13px;
+    }
+  }
+
+  .select2-container--open {
+    .select2-selection--single {
+      .select2-selection__arrow {
+        @include transform_rotate(180);
+      }
+    }
+  }
+
+  .select2-container {
+
+    + .select2-container {
+      left: auto !important;
+      right: 0;
+    }
+  }
+
+  .select2-results__option {
+    font-size: 14px;
   }
 }

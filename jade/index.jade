@@ -29,7 +29,6 @@ html(lang='ru')
                   span  р.
                   
                 a.btn_v1.order_btn.btn_green
-                  //-span._shadow.ff_cond Заказать сервер
                   span._text.ff_cond Заказать сервер
                   
             ul.hero_features
@@ -168,7 +167,6 @@ html(lang='ru')
 
               a.btn_v1.order_btn.btn_green_2(href='#')
                 span.ff_cond._text Подобрать
-              
                 
         .quality_section
           .section_inner
@@ -224,10 +222,151 @@ html(lang='ru')
                     span шаг
                     
                   p Оборудование бережно упаковывается, чтобы заказанный Вами сервер прибыл без повреждений.
-                    
-                    
+                  
+        .partners_section
+          .section_inner.clearfix
+            .section_caption.text_center Сервера Тринити уже используют
               
-              
-      +footer()
+            .partners_col
+              .partner_item
+                .partner_id 1
+                .partner_name Малый и средний бизнес
+              .partner_item
+                .partner_id 2
+                .partner_name Для 1С
+              .partner_item
+                .partner_id 3
+                .partner_name ЦОД
+              .partner_item
+                .partner_id 4
+                .partner_name Розничная торговля и ритейл
+              .partner_item
+                .partner_id 5
+                .partner_name Дистрибуция
+              .partner_item
+                .partner_id 6
+                .partner_name Логистика
+              .partner_item
+                .partner_id 7
+                .partner_name Телеком и хостинг
+                  
+            .partners_col
+              .partner_item
+                .partner_id 8
+                .partner_name Банки, бухгалтерия, финансы
+              .partner_item
+                .partner_id 9
+                .partner_name Наука и исследования
+              .partner_item
+                .partner_id 10
+                .partner_name Онлайн игры
+              .partner_item
+                .partner_id 11
+                .partner_name Поддержка производства
+              .partner_item
+                .partner_id 12
+                .partner_name Интернет магазины
+              .partner_item
+                .partner_id 13
+                .partner_name Базы данных
+              .partner_item
+                .partner_id 14
+                .partner_name Малый офис
 
-      
+        .guaranty_section
+          .section_inner
+            .section_caption.text_center Гарантия надежности от компании <br> с 23-летней историей
+
+            .guaranty_block
+              .guaranty_box
+                .guaranty_icon
+                  span.i-workers-team
+                  
+                p Более 3000 клиентов: государственные и коммерческие организации, научные институты, силовые ведомства, финансовые структуры и банки, промышленные и торговые предприятия.
+                
+              .guaranty_box
+                .guaranty_icon
+                  span.i-triple-arrow
+                  
+                p Компания Тринити обладает высшими партнёрскими статусами у большинства лучших мировых ИТ-производителей.
+                
+              .guaranty_box
+                .guaranty_icon
+                  span.i-handshake
+                  
+                p 9 направлений деятельности компании: <br> корпоративные сервера, проекты по построению ЦОД, виртуализация серверов, построение катастрофоустойчивых решений, системы IPTV, лицензионное ПО и другие.
+                p 
+                  a.blue_link(href='#') Остались вопросы?
+                  | <br>
+                  | Звоните: 
+                  a.blue_link(href='tel:88002005960') 8 800 200-59-60
+                
+              .guaranty_box
+                .guaranty_icon
+                  span.i-settings-work-tool
+                  
+                p Собственное серверное производство в Москве, Санкт-Петербурге и Екатеринбурге.
+              
+        .tie_section
+        .choose_section
+          .section_inner
+            .map_block
+              .map_title
+                span.map_counter 86
+                span.section_caption  сервисных центров в России, Казахстане и Белоруссии
+              .map_holder
+                img(src='img/map.jpg')
+            
+        .question_section
+          .section_inner.clearfix
+            .person_block
+              .fz_36.ff_cond.person_caption.text_center Остались вопросы?
+              .person_img
+                img(src='img/Businessman-PNG.png')
+                .person_info
+                  .person_name Чалов Анатолий
+                  .person_post Руководитель направления Тринити
+            
+            .contacts_block
+              .contacts_caption 
+                .fz_30.clr_white Звоните: 8 800 200-59-60
+                .fz_24.clr_light_blue или задайте свой вопрос
+            
+                  
+              .contacts_form
+                form(action='#')
+                  .fz_24.clr_light_blue.ff_cond.form_caption Ответим в течении 1 часа!
+                    
+                  .form_cell
+                    label.f_label.label_v2(for='name') Как вас зовут? 
+                    .input_w
+                      input#name.f_input.input_v2(placeholder='Ваше имя')
+                      span.input_icon.i-user-male-silhouette
+                      
+                  .form_cell
+                    label.f_label.label_v2(for='phone') Номер телефона 
+                    .input_w
+                      input#phone.f_input.input_v2(placeholder='Номер телефона')
+                      span.input_icon.i-smartphone-call
+                      
+                  .form_cell
+                    label.f_label.label_v2(for='city') Ваш город
+                    .input_w.select_v1
+                      select#city.f_input.input_v2.select2(data-placeholder='Ближайший к Вам город')
+                        <option></option>
+                        option(value=1) Город 1
+                        option(value=2) Город 2
+                        option(value=3) Город 3
+                      span.input_icon.i-map-marker
+                      
+                  .form_cell
+                    label.f_label.label_v2(for='question') Ваш вопрос 
+                    .input_w
+                      textarea#question.f_input.input_v2(placeholder='Ваш вопрос')
+                      span.input_icon.i-write-a-note
+                      
+                  .form_cell
+                    a.btn_v1.order_btn.btn_green
+                      span._text.ff_cond Отправить
+
+      +footer()

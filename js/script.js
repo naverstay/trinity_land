@@ -42,6 +42,20 @@ $(function ($) {
     }
   });
 
+  $('.select2').each(function (ind) {
+    var slct = $(this);
+
+    console.log(slct.attr('data-placeholder'));
+    
+    slct.select2({
+      minimumResultsForSearch: Infinity,
+      dropdownParent: slct.parent(),
+      allowClear: false,
+      placeholder: slct.attr('data-placeholder'),
+      width: '100%'
+    });
+  });
+
   $('.valMinus').on('click', function () {
     var valCell = $(this).closest('.valCell'),
       inp = valCell.find('input'),
