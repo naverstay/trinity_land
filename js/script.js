@@ -1,3 +1,5 @@
+var callback_popup;
+
 $(function ($) {
   console.log(100500);
 
@@ -45,8 +47,6 @@ $(function ($) {
   $('.select2').each(function (ind) {
     var slct = $(this);
 
-    console.log(slct.attr('data-placeholder'));
-    
     slct.select2({
       minimumResultsForSearch: Infinity,
       dropdownParent: slct.parent(),
@@ -82,4 +82,47 @@ $(function ($) {
     return false;
   });
 
+
+  callback_popup = $('#callback_popup').dialog({
+    autoOpen: false,
+    modal: true,
+    closeOnEscape: true,
+    closeText: '',
+    dialogClass: 'dialog_close_butt_mod_1 dialog_g_size_1',
+    //appendTo: '.wrapper',
+    width: 490,
+    draggable: true,
+    collision: "fit",
+    position: {my: "top center", at: "top center", of: window},
+    open: function (event, ui) {
+
+    },
+    close: function (event, ui) {
+
+    }
+  });
+
+  $('.openPopup').on('click', function () {
+
+    callback_popup.dialog('open');
+
+    return false;
+  });
+
+  all_dialog_close();
+
 });
+
+
+function all_dialog_close() {
+  $('body').on('click', '.ui-widget-overlay, .popupClose', all_dialog_close_gl);
+}
+
+function all_dialog_close_gl() {
+  $(".ui-dialog-content").each(function () {
+    var $this = $(this);
+    if (!$this.parent().hasClass('always_open')) {
+      $this.dialog("close");
+    }
+  });
+}

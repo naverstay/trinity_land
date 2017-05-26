@@ -1,4 +1,6 @@
 @charset "UTF-8";
+.dialog_butt_v1 .dialog_butt_wrap { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row nowrap; flex-flow: row nowrap; -webkit-justify-content: center; justify-content: center; -webkit-align-items: flex-start; align-items: flex-start; -webkit-box-pack: center; -webkit-box-align: start; }
+
 .hero_server:before, .hero_features:before, .testing_block:before, .solution_list:before, .manufacturer_list:before, .quality_steps:before, .hero_server:after, .hero_features:after, .testing_block:after, .solution_list:after, .manufacturer_list:after, .quality_steps:after { content: ""; display: table; }
 .hero_server:after, .hero_features:after, .testing_block:after, .solution_list:after, .manufacturer_list:after, .quality_steps:after { clear: both; }
 
@@ -65,9 +67,9 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transpa
 a { text-decoration: none; }
 
 /*-----------------------------form elements###*/
-.select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:after, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before { /* use !important to prevent issues with browser extensions that change fonts */ font-family: "trinity_icons" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.dialog_close_butt_mod_1 .ui-dialog-titlebar-close:after, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:after, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before { /* use !important to prevent issues with browser extensions that change fonts */ font-family: "trinity_icons" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-@font-face { font-family: 'trinity_icons'; src: url("../fonts/trinity_icons.eot?a5vakv"); src: url("../fonts/trinity_icons.eot?a5vakv#iefix") format("embedded-opentype"), url("../fonts/trinity_icons.ttf?a5vakv") format("truetype"), url("../fonts/trinity_icons.woff?a5vakv") format("woff"), url("../fonts/trinity_icons.svg?a5vakv#trinity_icons") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'trinity_icons'; src: url("../fonts/trinity_icons.eot?u7comr"); src: url("../fonts/trinity_icons.eot?u7comr#iefix") format("embedded-opentype"), url("../fonts/trinity_icons.ttf?u7comr") format("truetype"), url("../fonts/trinity_icons.woff?u7comr") format("woff"), url("../fonts/trinity_icons.svg?u7comr#trinity_icons") format("svg"); font-weight: normal; font-style: normal; }
 [class^="i-"], [class*=" i-"] { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'trinity_icons' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .i-trinity:before { content: ""; }
@@ -106,7 +108,39 @@ a { text-decoration: none; }
 
 .i-write-a-note:before { content: ""; }
 
+.i-close:before { content: ""; }
+
 .i-chevron-down:before { content: ""; }
+
+.ui-helper-hidden { display: none; }
+
+.ui-helper-hidden-accessible { z-index: 5000; position: absolute; opacity: 0; left: 0; color: transparent; visibility: hidden; }
+
+.ui-dialog { z-index: 1000; position: absolute; display: none; outline: 0; }
+.ui-dialog.dialog_g_size_1 { background: url(../img/question_bg.jpg) no-repeat 50% 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.no_animation .ui-dialog { display: none !important; }
+
+.dialog_global { box-shadow: 0 3px 13px rgba(59, 59, 59, 0.86); }
+
+.ui-dialog-content { min-height: 0 !important; }
+.dialog_color_schem_1 .ui-dialog-content { background: #e5e5e5; }
+
+.ui-resizable-handle { display: none !important; }
+
+.ui-widget-overlay { z-index: 500; position: fixed; width: 100%; height: 100%; left: 0; top: 0; background: rgba(41, 59, 71, 0.4); }
+
+.ui-helper-clearfix { display: block; }
+.ui-helper-clearfix:after { display: block; height: 0; clear: both; content: ""; visibility: hidden; }
+
+.dialog_close_butt_mod_1 .ui-dialog-titlebar-close { cursor: pointer; position: absolute; top: 10px; right: 20px; width: 28px; height: 28px; text-align: center; border-radius: 100%; background: none; }
+.dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before { position: absolute; top: 0; bottom: 0; left: 0; right: 0; color: #fff; font-size: 28px; content: ""; }
+.no_close_mod .ui-dialog-titlebar-close { display: none !important; }
+
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+.dialog_g_size_1 .ui-dialog-titlebar { padding: 12px 50px 15px 20px; color: #1d1d1b; }
+.title_center_mod .ui-dialog-titlebar { text-align: center; }
+
+.dialog_butt_v1 .dialog_butt_wrap { padding: 25px 0; }
 
 html, body { height: 100%; }
 
@@ -597,6 +631,8 @@ textarea.f_input.input_v2 { height: 100px; }
 .select_v1 .select2-container--open .select2-selection--single .select2-selection__arrow { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .select_v1 .select2-container + .select2-container { left: auto !important; right: 0; }
 .select_v1 .select2-results__option { font-size: 14px; }
+
+.popup { display: none; position: relative; overflow: hidden; }
 
 .select2-container { box-sizing: border-box; display: inline-block; margin: 0; position: relative; vertical-align: middle; }
 

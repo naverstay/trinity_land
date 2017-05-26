@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'trinity_icons';
-  src:  url('#{$icomoon-font-path}/trinity_icons.eot?a5vakv');
-  src:  url('#{$icomoon-font-path}/trinity_icons.eot?a5vakv#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/trinity_icons.ttf?a5vakv') format('truetype'),
-    url('#{$icomoon-font-path}/trinity_icons.woff?a5vakv') format('woff'),
-    url('#{$icomoon-font-path}/trinity_icons.svg?a5vakv#trinity_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/trinity_icons.eot?u7comr');
+  src:  url('#{$icomoon-font-path}/trinity_icons.eot?u7comr#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/trinity_icons.ttf?u7comr') format('truetype'),
+    url('#{$icomoon-font-path}/trinity_icons.woff?u7comr') format('woff'),
+    url('#{$icomoon-font-path}/trinity_icons.svg?u7comr#trinity_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -114,6 +114,11 @@
 .i-write-a-note {
   &:before {
     content: $i-write-a-note;
+  }
+}
+.i-close {
+  &:before {
+    content: $i-close;
   }
 }
 .i-chevron-down {

@@ -28,7 +28,7 @@ html(lang='ru')
                   span.ff_cond 33 000
                   span  р.
                   
-                a.btn_v1.order_btn.btn_green
+                a.openPopup.btn_v1.order_btn.btn_green
                   span._text.ff_cond Заказать сервер
                   
             ul.hero_features
@@ -94,7 +94,7 @@ html(lang='ru')
                     span.fz_18  рублей
                     
                   .solution_control
-                    a.btn_v1.order_btn.btn_green_2(href='#')
+                    a.openPopup.btn_v1.order_btn.btn_green_2(href='#')
                       span.ff_cond._text Заказать
                       
               li
@@ -113,7 +113,7 @@ html(lang='ru')
                     span.fz_18  рублей
                     
                   .solution_control
-                    a.btn_v1.order_btn.btn_green_2(href='#')
+                    a.openPopup.btn_v1.order_btn.btn_green_2(href='#')
                       span.ff_cond._text Заказать
                       
               li
@@ -132,7 +132,7 @@ html(lang='ru')
                     span.fz_18  рублей
                     
                   .solution_control
-                    a.btn_v1.order_btn.btn_green_2(href='#')
+                    a.openPopup.btn_v1.order_btn.btn_green_2(href='#')
                       span.ff_cond._text Заказать
                       
             .section_caption.text_center Мы официальные поставщики следующих <br> производителей
@@ -145,7 +145,7 @@ html(lang='ru')
                     img(src='img/manufacturer_' + (++i) + '.png')
                 
             .learn_more
-              a.btn_v1.order_btn.btn_green_2(href='#')
+              a.openPopup.btn_v1.order_btn.btn_green_2(href='#')
                 span.ff_cond._text Подробнее
 
         .tie_section
@@ -165,7 +165,7 @@ html(lang='ru')
                 .btn_v1.btn_gray.counter_btn.minus.valMinus -
                 .btn_v1.btn_gray.counter_btn.plus.valPlus +
 
-              a.btn_v1.order_btn.btn_green_2(href='#')
+              a.openPopup.btn_v1.order_btn.btn_green_2(href='#')
                 span.ff_cond._text Подобрать
                 
         .quality_section
@@ -331,28 +331,27 @@ html(lang='ru')
               .contacts_caption 
                 .fz_30.clr_white Звоните: 8 800 200-59-60
                 .fz_24.clr_light_blue или задайте свой вопрос
-            
                   
               .contacts_form
-                form(action='#')
+                form(action='contact.php' method='POST')
                   .fz_24.clr_light_blue.ff_cond.form_caption Ответим в течении 1 часа!
                     
                   .form_cell
                     label.f_label.label_v2(for='name') Как вас зовут? 
                     .input_w
-                      input#name.f_input.input_v2(placeholder='Ваше имя')
+                      input#name.f_input.input_v2(placeholder='Ваше имя' name='name')
                       span.input_icon.i-user-male-silhouette
                       
                   .form_cell
                     label.f_label.label_v2(for='phone') Номер телефона 
                     .input_w
-                      input#phone.f_input.input_v2(placeholder='Номер телефона')
+                      input#phone.f_input.input_v2(placeholder='Номер телефона' name='phone')
                       span.input_icon.i-smartphone-call
                       
                   .form_cell
                     label.f_label.label_v2(for='city') Ваш город
                     .input_w.select_v1
-                      select#city.f_input.input_v2.select2(data-placeholder='Ближайший к Вам город')
+                      select#city.f_input.input_v2.select2(data-placeholder='Ближайший к Вам город' name='city')
                         <option></option>
                         option(value=1) Город 1
                         option(value=2) Город 2
@@ -362,7 +361,7 @@ html(lang='ru')
                   .form_cell
                     label.f_label.label_v2(for='question') Ваш вопрос 
                     .input_w
-                      textarea#question.f_input.input_v2(placeholder='Ваш вопрос')
+                      textarea#question.f_input.input_v2(placeholder='Ваш вопрос' name='question')
                       span.input_icon.i-write-a-note
                       
                   .form_cell
@@ -370,3 +369,4 @@ html(lang='ru')
                       span._text.ff_cond Отправить
 
       +footer()
+      +popups()
